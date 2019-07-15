@@ -32,3 +32,19 @@ print(result)
     + 匹配1次或者无限次
     ? 匹配0次或者1次 
 '''
+
+import requests
+
+# requests 学习
+baseUrl = 'https://www.douban.com/search'
+
+# 构建get 请求
+dict = {'q':'golang'}
+r = requests.get(baseUrl,params= dict)
+print(r.url)
+print(r.status_code)
+
+# 构建post 请求
+data = {'user':'dollarkiller','password':'xxxxxxx'}
+r = requests.post(baseUrl,data = data)
+print(r.status_code)
